@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      routes:
+        # ??????? ??? Language Service
+        - id: language-service
+          uri: lb://language-service
+          predicates:
+            - Path=/languages/**
+        # ??????? ??? Skill Service
+        - id: skill-service
+          uri: lb://skill-service
+          predicates:
+            - Path=/skills/**
+        # ??????? ??? Competence Service
+        - id: competence-service
+          uri: lb://competence-service
+          predicates:
+            - Path=/competence/**
+  eureka:
+    client:
+      service-url:
+        defaultZone: http://localhost:8761/eureka
+
+server:
+  port: 8081  # ???? ??? Gateway
