@@ -1,0 +1,31 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: keycloak-service
+
+#  security:
+#    oauth2:
+#      resourceserver:
+#        jwt:
+#          jwk-set-uri: http://localhost:8080/realms/microservices-realm/protocol/openid-connect/certs
+
+#  datasource:
+#    url: jdbc:postgresql://localhost:5433/profiler-db
+#    username: postgres
+#    password: 1234
+#    driver-class-name: org.postgresql.Driver
+#    initialization-mode: always
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+keycloak:
+  admin:
+    username: admin
+    password: admin_password  # ??????? ?????? ??????????????

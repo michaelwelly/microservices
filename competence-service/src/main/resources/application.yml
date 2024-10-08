@@ -1,19 +1,19 @@
 spring:
   application:
     name: competence-service
-  security:
-    oauth2:
-      client:
-        registration:
-          keycloak:
-            client-id: competence-service    # ID ?????? ??????? ? Keycloak
-            client-secret: ymdrtdRWHF56mHqvoFjgXhw3h4PVUFaM   # ??? ?????????? ??????
-            authorization-grant-type: client_credentials      # ??? grant - client credentials
-        provider:
-          keycloak:
-            issuer-uri: http://localhost:8080/realms/microservices-realm  # ????? ?????? Keycloak Realm
-            token-uri: http://localhost:8080/realms/microservices-realm/protocol/openid-connect/token
-            jwk-set-uri: http://localhost:8080/realms/microservices-realm/protocol/openid-connect/certs
+#  security:
+#    oauth2:
+#      client:
+#        registration:
+#          keycloak:
+#            client-id: competence-service    # ID ?????? ??????? ? Keycloak
+#            client-secret: ymdrtdRWHF56mHqvoFjgXhw3h4PVUFaM   # ??? ?????????? ??????
+#            authorization-grant-type: client_credentials      # ??? grant - client credentials
+#        provider:
+#          keycloak:
+#            issuer-uri: http://localhost:8080/realms/microservices-realm  # ????? ?????? Keycloak Realm
+#            token-uri: http://localhost:8080/realms/microservices-realm/protocol/openid-connect/token
+#            jwk-set-uri: http://localhost:8080/realms/microservices-realm/protocol/openid-connect/certs
 #  jpa:
 #     hibernate:
 #       ddl-auto: update
